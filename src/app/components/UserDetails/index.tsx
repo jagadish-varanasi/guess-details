@@ -10,15 +10,19 @@ const UserDetails: React.FC<{ details: DetailsState | null }> = ({
     return <div className="text-red-400">Unable to fetch details!!</div>;
   }
   return (
-    <div>
-      <div className="flex gap-4">
-        <div className="bg-pink-400 w-[200px] h-[100px] rounded-md text-white flex flex-col items-center justify-center gap-1">
+    <div className="mt-2">
+      <hr />
+      <div className="text-center text-xl font-bold my-2 text-gray-500">
+        Name: {details?.name}
+      </div>
+      <div className="flex gap-4  text-white">
+        <div className="bg-pink-400 w-[200px] h-[100px] rounded-md flex flex-col items-center justify-center gap-1">
           <div>Age</div>
           <div className="text-xl font-bold">
             {details?.age ?? "No data found"}
           </div>
         </div>
-        <div className="bg-purple-400 w-[200px] h-[100px] rounded-md text-white flex flex-col items-center justify-center gap-1">
+        <div className="bg-purple-400 w-[200px] h-[100px] rounded-m flex flex-col items-center justify-center gap-1">
           <div>Gender</div>
           <div className="text-xl font-bold capitalize">
             {details?.gender ?? "No data found"}

@@ -32,17 +32,24 @@ const UserForm: React.FC<{
         age: data1.age,
         gender: data2.gender,
         nationality: data3.country,
+        name: data3.name,
         isError: false,
       });
     } catch (error) {
       console.error("Error fetching data:", error);
-      setDetails({ isError: true, age: 0, gender: "NA", nationality: [] });
+      setDetails({
+        isError: true,
+        age: 0,
+        gender: "NA",
+        nationality: [],
+        name: "",
+      });
     } finally {
       setName("");
     }
   };
   return (
-    <form onSubmit={handleSubmit} className="flex items-center gap-3 mb-4">
+    <form onSubmit={handleSubmit} className="flex items-center gap-3 mb-1">
       <input
         type="text"
         placeholder="Enter your name..."

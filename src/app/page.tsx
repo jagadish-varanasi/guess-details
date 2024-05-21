@@ -4,6 +4,7 @@ import UserForm from "./components/UserForm";
 import UserDetails from "./components/UserDetails";
 
 export interface DetailsState {
+  name:string;
   age: number;
   gender: string;
   nationality: Array<{ country_id: string; probability: number }>;
